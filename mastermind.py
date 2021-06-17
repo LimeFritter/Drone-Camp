@@ -11,6 +11,8 @@ highest = 0
 highComp = 0
 while win == 0:
     compResponse = [0,0,0,0,0]
+    sumBest = 0
+    now = [0,0,0,0,0]
 
     userNum = input("guess any 5 digit number or type help.")
     if userNum == "help":
@@ -77,3 +79,27 @@ while win == 0:
                     compResponse[3] = 1
                 else:
                     compResponse[3] = 0
+            if userNum[4] == comp5:
+                compResponse[4] = 2
+            elif userNum[4] != comp5:
+                if userNum[4] == comp1:
+                    compResponse[4] = 1
+                elif userNum[4] == comp2:
+                    compResponse[4] = 1
+                elif userNum[4] == comp3:
+                    compResponse[4] = 1
+                elif userNum[4] == comp4:
+                    compResponse[4] = 1
+                else:
+                    compResponse[4] = 0
+            print(f"{compResponse[0]}{compResponse[1]}{compResponse[2]}{compResponse[3]}{compResponse[4]}")
+            now[0] = compResponse[0]
+            now[1] = compResponse[1]
+            now[2] = compResponse[2]
+            now[3] = compResponse[3]
+            now[4] = compResponse[4]
+            if now[0] + now[1] + now[2] + now[3] + now[4] > int(highest):
+                highest = f"{now[0]}{now[1]}{now[2]}{now[3]}{now[4]}"
+                highComp = f"{compResponse[0]}{compResponse[1]}{compResponse[2]}{compResponse[3]}{compResponse[4]}"
+            else:
+                continue
