@@ -26,12 +26,14 @@ while win == 0:
             print(f"{highest} \n {highComp}")
     else:
         if userNum.isnumeric():
-            if userNum[0] == comp1:
-                compResponse[0] = 2
-            elif userNum[0] != comp1:
-                if userNum[0] == comp2:
+            userNumlist = [userNum[0],userNum[1],userNum[2],userNum[3],userNum[4]]
+
+            if userNumlist[0] == comp1:
+                compResponse[0] += 2
+            elif userNumlist[0] != comp1:
+                if userNumlist[0] == comp2:
                     compResponse[0] = 1
-                elif userNum[0] == comp3:
+                elif userNumlist[0] == comp3:
                     compResponse[0] = 1
                 elif userNum[0] == comp4:
                     compResponse[0] = 1
