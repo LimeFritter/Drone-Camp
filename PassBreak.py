@@ -1,3 +1,4 @@
+#you can type anynumber of any length and this will guess it
 password = input("type any number")
 passLength = len(password)
 passToGuess = []
@@ -18,6 +19,7 @@ for x in range(passLength):
         print(compguess)
         if compguess[x] == passToGuess[x]:
             compfinal[x] = compguess[x]
+            
             
        
     
