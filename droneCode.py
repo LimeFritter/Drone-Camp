@@ -32,9 +32,10 @@ steve.takeoff()
 #steve.forward(100)
 
 #steve.curve(50,50,0,50,-50,0,30)
-vertiCircle()
-steve.flip("b")
-steve.land()
+#vertiCircle()
+#steve.flip("b")
+#steve.land()
+vertiSquare()
 
 
 

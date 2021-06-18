@@ -27,7 +27,7 @@ def divisibleBy():
     else:
         print(num1, "is not divisible by", num2)
 
-start = int(input("Welcom to the divisible thingy. if you want to see if a number is odd, even, divisible by 3 or Five press 0. if you want to see if a number is divisible by any other number press 1:"))
+start = int(input("Welcome to the divisible thingy. if you want to see if a number is odd, even, divisible by 3 or Five press 0. if you want to see if a number is divisible by any other number press 1:"))
 if start == 0:
     divideGen()
 elif start == 1:
