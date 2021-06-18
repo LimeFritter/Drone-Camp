@@ -19,6 +19,7 @@ win = False
 loss = 0
 safe = False
 letters = ""
+numletters = len(letters)
 for i in range(blank):
     if toBeGuess[i].isalpha():
         userSee += "_"
@@ -26,9 +27,15 @@ for i in range(blank):
         userSee += toBeGuess[i]
 
 while win == False:
+    numletters = len(letters)
     safe = False
     userGuess = input(f"Guess a letter.{userSee} \n>>>  ")
     newUserSee =""
+    for c in range(numletters):
+        if userGuess == letters[c]:
+            print(f"you have already guessed {letters[c]}")
+            continue
+    
     if userGuess == "letters":
             print(letters)
             safe = True
